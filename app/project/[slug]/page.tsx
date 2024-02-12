@@ -1,22 +1,28 @@
+
+type Props = {
+  params: { slug: string }
+}
+
 import BaseLayout from '@/common/layouts/base'
 import { METADATA } from '@/common/layouts/constant/metadata'
-import Home from '@/modules/home/home'
+import ProjectSlug from '@/modules/project/slug/project-slug'
 import { Metadata } from 'next'
 import React from 'react'
 
 export const metadata: Metadata = {
-  title: `Homepage ${METADATA.exTitle}`,
+  title: `Blog ${METADATA.exTitle}`,
   alternates: {
     canonical: process.env.DOMAIN,
   },
 }
 
-const HomePage = () => {
+const SlugBlogPage = ({ params }: Props) => {
+
   return (
     <BaseLayout>
-      <Home />
+      <ProjectSlug slug={params.slug} />
     </BaseLayout>
   )
 }
 
-export default HomePage
+export default SlugBlogPage

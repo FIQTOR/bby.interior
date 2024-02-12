@@ -1,22 +1,22 @@
 import BaseLayout from '@/common/layouts/base'
 import { METADATA } from '@/common/layouts/constant/metadata'
-import Home from '@/modules/home/home'
+import Project from '@/modules/project/project'
 import { Metadata } from 'next'
 import React from 'react'
 
 export const metadata: Metadata = {
-  title: `Homepage ${METADATA.exTitle}`,
+  title: `Project ${METADATA.exTitle}`,
   alternates: {
     canonical: process.env.DOMAIN,
   },
 }
 
-const HomePage = () => {
+const ProjectPage = () => {
   return (
     <BaseLayout>
-      <Home />
+      <Project />
     </BaseLayout>
   )
 }
 
-export default HomePage
+export default ProjectPage

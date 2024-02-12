@@ -2,7 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fecdd3;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +53,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
