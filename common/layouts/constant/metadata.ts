@@ -1,17 +1,17 @@
 export const METADATA = {
   appName: 'bby.interior',
-  creator: 'FIQTOR',
+  creator: 'bby.interior',
   description:
-    'Personal website, portfolio, fullstack website developer',
+    '3D Designer',
   keyword:
-    'fiqtor, FIQTOR, taufiiqul hakim, programming tips, belajar javascript, belajar typescript',
+    'bby.interior, designer tips, belajar javascript, belajar typescript',
   authors: {
-    name: 'Taufiiqul Hakim',
+    name: 'bby.interior',
     url: process.env.DOMAIN,
   },
   openGraph: {
     url: process.env.DOMAIN,
-    siteName: 'FIQTOR',
+    siteName: 'bby.interior',
     locale: 'id-ID',
   },
   icons: {
@@ -23,7 +23,7 @@ export const METADATA = {
       url: '/favicon.ico',
     },
   },
-  exTitle: '| FIQTOR',
+  exTitle: '| bby.interior',
   profile: 'https://avatars.githubusercontent.com/u/117913964?v=4',
   phoneNumber: '+6281617262908'
 };
