@@ -27,7 +27,7 @@ export default function Navbar() {
         <hr />
       </div>
 
-      {navShow ? <div onClick={() => handleNav(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-30'></div> : ''}
+      {navShow ? <div onClick={() => handleNav(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-30 md:hidden block'></div> : ''}
       <ul className={`fixed w-80 max-w-screen bg-rose-200 h-screen py-14
       top-0 flex flex-col gap-2 shadow-2xl md:bg-transparent
       md:flex-row md:relative md:max-w-full md:gap-7 md:justify-center

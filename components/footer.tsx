@@ -28,16 +28,13 @@ const Footer = () => {
               <a href="#">Instagram</a>
             </li>
             <li className='hover:opacity-70 duration-200'>
-              <a href="#">Facebook</a>
-            </li>
-            <li className='hover:opacity-70 duration-200'>
-              <a href="#">Linkedin</a>
+              <a href="mailto:isaendika1@gmail.com">isaendika1@gmail.com</a>
             </li>
           </ul>
         </div>
         <div className='flex flex-col gap-4'>
           <img src="/img/icon.webp" alt="icon.webp" className='w-20 h-20' />
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Living solution</p>
         </div>
       </div>
       <p className='w-full text-center font-medium py-7'>Copyright © 2024 bby.interior | All Rights Reserved.</p>

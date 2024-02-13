@@ -15,16 +15,16 @@ const ProjectSlug = ({ slug }: ProjectSlugProps) => {
   const blog = getBlog(slug)
 
   return (
-    <section className='p-7 md:px-14 py-28 flex flex-col gap gap-7 text-lg'>
-      <h1 className='text-6xl font-bold'>{blog?.title}</h1>
-      <div className='flex flex-col-reverse md:flex-row justify-between'>
+    <section className='p-7 md:px-14 py-28 flex flex-col gap gap-7 text-lg relative overflow-hidden'>
+      <h1 className='text-4xl md:text-6xl font-bold text-center md:text-start'>{blog?.title}</h1>
+      <div className='flex flex-col-reverse md:flex-row justify-between gap-4'>
         <div className='flex flex-col gap-4 w-full md:w-1/2'>
           {blog?.descriptions.map((paragaph: string, index: number) => (
             <p key={index} className='indent-7'>{paragaph}</p>
           ))}
         </div>
-        <div className='w-full md:w-1/2 md:flex-row justify-center relative overflow-hidden'>
-          <div className='w-4/5 flex flex-col gap-4'>
+        <div className='w-full md:w-1/2 flex justify-center'>
+          <div className='w-1/2 md:w-4/5 flex flex-col gap-4'>
 
             <Swiper
               modules={[EffectCards]}
@@ -41,25 +41,27 @@ const ProjectSlug = ({ slug }: ProjectSlugProps) => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className='flex flex-col gap-2'>
-              <span className='font-medium text-sm'>Tags:</span>
-              <div className='flex flex-wrap gap-2'>
-                {blog?.tags && blog.tags.map((tag: any, index: number) => (
-                  <div key={index}>
-                    <span className='px-4 py-1 bg-slate-100 rounded-sm shadow-md text-base'>{tag}</span>
-                  </div>
-                ))}
+            <div className='flex md:flex-col justify-between'>
+              <div className='flex flex-col gap-2'>
+                <span className='font-medium text-sm'>Tags:</span>
+                <div className='flex flex-wrap gap-2'>
+                  {blog?.tags && blog.tags.map((tag: any, index: number) => (
+                    <div key={index}>
+                      <span className='px-4 py-1 bg-slate-100 rounded-sm shadow-md text-base'>{tag}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div className='flex flex-col gap-2'>
-              <span className='font-medium text-sm'>Skills:</span>
-              <div className='flex flex-wrap gap-2'>
-                {blog?.icons.map((icon: any, index: number) => (
-                  <div key={index}>
-                    <icon.SvgIcon className='w-7 h-7' />
-                  </div>
-                ))}
+              <div className='flex flex-col gap-2'>
+                <span className='font-medium text-sm'>Skills:</span>
+                <div className='flex flex-wrap gap-2'>
+                  {blog?.icons.map((icon: any, index: number) => (
+                    <div key={index}>
+                      <icon.SvgIcon className='w-7 h-7' />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
