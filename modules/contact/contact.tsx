@@ -1,6 +1,5 @@
 'use client'
 import { METADATA } from '@/common/layouts/constant/metadata'
-import { error } from 'console'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { SiFacebook, SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
@@ -21,19 +20,22 @@ Email Address: ${email} %0A
 Message: ${message} %0A`
 
   function handleSubmit() {
-    // if (name === '') {
-    //   errors.name = 'Name required *'
-    // }
-    // if (email === '') {
-    //   errors.email = 'Email required *'
-    // }
-    // if (message === '') {
-    //   errors.message = 'Message required *'
-    // }
+    if (name === '') {
+      errors.name = 'Name required *'
+    }
+    if (email === '') {
+      errors.email = 'Email required *'
+    }
+    if (message === '') {
+      errors.message = 'Message required *'
+    }
+
+    console.log(errors);
 
 
 
-    if (errors.name != '' && errors.email != '' && errors.message != '') {
+
+    if (errors.name == '' && errors.email == '' && errors.message == '') {
       window.location.href = `https://wa.me/${METADATA.phoneNumber}?text=${waMessage}`;
     }
   }
@@ -46,20 +48,19 @@ Message: ${message} %0A`
         <h1 className='absolute text-6xl font-bold text-center w-full -top-7'>Contact</h1>
         <div className='flex flex-col gap-4 max-w-[500px] w-f'>
           <div className='flex flex-col gap-2'>
-            <p>{name}</p>
-            <p>{email}</p>
-            <p>{message}</p>
             <label htmlFor="name">Full name or company name</label>
             <input type="text" placeholder='example: Indonesia Studio' className='px-2 py-1 rounded-md outline outline-1 outline-neutral-500 focus:outline-rose-200 focus:outline-2' onChange={(e) => setName(e.target.value)} />
-            {errors.name != ' ' && <span>{errors.name}</span>}
+            {errors.name != '' && <span>{errors.name}</span>}
           </div>
           <div className='flex flex-col gap-2'>
             <label htmlFor="name">Email Address</label>
             <input type="email" placeholder='example@gmail.com' className='px-2 py-1 rounded-md outline outline-1 outline-neutral-500 focus:outline-rose-200 focus:outline-2' onChange={(e) => setEmail(e.target.value)} />
+            {errors.email != '' && <span>{errors.email}</span>}
           </div>
           <div className='flex flex-col gap-2'>
             <label htmlFor="name">Message</label>
             <textarea placeholder='' className='px-2 py-1 rounded-md outline outline-1 outline-neutral-500 focus:outline-rose-200 focus:outline-2' onChange={(e) => setMessage(e.target.value)}></textarea>
+            {errors.message != '' && <span>{errors.message}</span>}
           </div>
 
           <button onClick={() => handleSubmit()} className='w-full text-center py-1 rounded-md shadow-md hover:opacity-70 bg-rose-200 flex justify-center items-center gap-2 px-2'>

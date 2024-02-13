@@ -1,4 +1,5 @@
 import { Projects } from '@/common/layouts/constant/projets'
+import Link from 'next/link'
 import React from 'react'
 
 const ProjectSectionCard = () => {
@@ -12,7 +13,7 @@ const ProjectSectionCard = () => {
           <div className='p-4'>
             <div className='flex justify-between'>
               <h5 className='font-bold text-xl'>{project.title}</h5>
-              <a href={`/project/${slugify(project.title)}`} className='text-center text-blue-400 hover:opacity-70 duration-200'>Lihat Selengkapnya</a>
+              <Link href={`/project/${slugify(project.title)}`} className='text-center text-blue-400 hover:opacity-70 duration-200'>Lihat Selengkapnya</Link>
             </div>
             <p>
               {project.shortDescription}
@@ -24,7 +25,7 @@ const ProjectSectionCard = () => {
                 </div>
               ))}
             </div>
-            <div className='flex flex-wrap pt-4'>
+            <div className='flex flex-wrap pt-4 gap-2'>
               {(project.icons).map((icon: any, index: number) => (
                 <div key={index}>
                   <icon.SvgIcon className='w-7 h-7' />

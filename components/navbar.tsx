@@ -28,10 +28,10 @@ export default function Navbar() {
       </div>
 
       {navShow ? <div onClick={() => handleNav(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-30'></div> : ''}
-      <ul className={`fixed w-80 max-w-screen bg-rose-200 h-screen py-4
+      <ul className={`fixed w-80 max-w-screen bg-rose-200 h-screen py-14
       top-0 flex flex-col gap-2 shadow-2xl md:bg-transparent
-      md:flex-row md:relative md:max-w-full md:gap-4 md:justify-center
-      md:items-center md:left-0 md:w-full duration-200 md:h-full
+      md:flex-row md:relative md:max-w-full md:gap-7 md:justify-center
+      md:items-center md:left-0 md:w-full duration-200 md:h-full md:py-0
       ${navShow ? 'left-0' : '-left-full'}`}>
         <button onClick={() => handleNav(false)}
           className='md:hidden'>
@@ -39,7 +39,7 @@ export default function Navbar() {
         </button>
         <div className='px-4 flex flex-col gap-2 items-center
     md:hidden'>
-          <img src="/img/icon.jpg" alt="icon.webp" width='100%' height='100%'
+          <img src="/img/icon.webp" alt="icon.webp" width='100%' height='100%'
             className='w-1/2 aspect-square md:w-fit md:h-10' />
           <span className='text-white font-semibold text-2xl
       md:w-1/2 md:text-sm'>
@@ -50,10 +50,9 @@ export default function Navbar() {
         {NavLink('About', handleNav, '/#about')}
         {NavLink('Skill', handleNav, '/#skills')}
         {NavLink('Projects', handleNav, '/project')}
-        {NavLink('Contact', handleNav, '/contact')}
-        <div className='absolute right-14 top-2 bg-rose-200 py-2 px-4 rounded-lg hover:opacity-70 duration-300 shadow-md'>
-          <Link href="/contact">Let's Talk</Link>
-        </div>
+        <li className='md:absolute right-14 top-2 flex px-7 md:px-0'>
+          <Link href="/contact" className='bg-rose-300 md:bg-rose-200 rounded-lg hover:opacity-70 duration-300 shadow-md w-full py-2 px-4'>Let's Talk</Link>
+        </li>
       </ul>
     </nav>
   )
