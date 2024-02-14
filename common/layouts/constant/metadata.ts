@@ -25,5 +25,5 @@ export const METADATA = {
   },
   exTitle: '| bby.interior',
   profile: 'https://avatars.githubusercontent.com/u/117913964?v=4',
-  phoneNumber: '+6281617262908'
+  phoneNumber: '+628113309677'
 };

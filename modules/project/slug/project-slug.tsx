@@ -41,7 +41,7 @@ const ProjectSlug = ({ slug }: ProjectSlugProps) => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className='flex md:flex-col justify-between'>
+            <div className='flex md:flex-col justify-between gap-4'>
               <div className='flex flex-col gap-2'>
                 <span className='font-medium text-sm'>Tags:</span>
                 <div className='flex flex-wrap gap-2'>

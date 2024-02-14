@@ -30,11 +30,6 @@ Message: ${message} %0A`
       errors.message = 'Message required *'
     }
 
-    console.log(errors);
-
-
-
-
     if (errors.name == '' && errors.email == '' && errors.message == '') {
       window.location.href = `https://wa.me/${METADATA.phoneNumber}?text=${waMessage}`;
     }
@@ -48,17 +43,17 @@ Message: ${message} %0A`
         <h1 className='absolute text-6xl font-bold text-center w-full -top-7 left-0'>Contact</h1>
         <div className='flex flex-col gap-4 md:max-w-[500px]'>
           <div className='flex flex-col gap-2'>
-            <label htmlFor="name">Full name or company name</label>
+            <label htmlFor="name">Full name or company name *</label>
             <input type="text" placeholder='example: Indonesia Studio' className='px-2 py-1 rounded-md outline outline-1 outline-neutral-500 focus:outline-rose-200 focus:outline-2' onChange={(e) => setName(e.target.value)} />
             {errors.name != '' && <span>{errors.name}</span>}
           </div>
           <div className='flex flex-col gap-2'>
-            <label htmlFor="name">Email Address</label>
+            <label htmlFor="name">Email Address *</label>
             <input type="email" placeholder='example@gmail.com' className='px-2 py-1 rounded-md outline outline-1 outline-neutral-500 focus:outline-rose-200 focus:outline-2' onChange={(e) => setEmail(e.target.value)} />
             {errors.email != '' && <span>{errors.email}</span>}
           </div>
           <div className='flex flex-col gap-2'>
-            <label htmlFor="name">Message</label>
+            <label htmlFor="name">Message *</label>
             <textarea placeholder='' className='px-2 py-1 rounded-md outline outline-1 outline-neutral-500 focus:outline-rose-200 focus:outline-2' onChange={(e) => setMessage(e.target.value)}></textarea>
             {errors.message != '' && <span>{errors.message}</span>}
           </div>
