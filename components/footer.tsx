@@ -11,13 +11,19 @@ const Footer = () => {
           <h6 className='font-bold text-4xl'>Navigation</h6>
           <ul>
             <li className='hover:opacity-70 duration-200'>
-              <a href="#">Homepage</a>
+              <a href="/#">Homepage</a>
             </li>
             <li className='hover:opacity-70 duration-200'>
-              <a href="#">About</a>
+              <a href="/#about">About</a>
             </li>
             <li className='hover:opacity-70 duration-200'>
-              <a href="#">Contact</a>
+              <a href="/#skills">Skills</a>
+            </li>
+            <li className='hover:opacity-70 duration-200'>
+              <a href="/#project">Project</a>
+            </li>
+            <li className='hover:opacity-70 duration-200'>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -25,7 +31,7 @@ const Footer = () => {
           <h6 className='font-bold text-4xl'>Social Media</h6>
           <ul>
             <li className='hover:opacity-70 duration-200'>
-              <a href="#">Instagram</a>
+              <a href="https://www.instagram.com/dikaendikaa">Instagram</a>
             </li>
             <li className='hover:opacity-70 duration-200'>
               <a href="mailto:isaendika1@gmail.com">isaendika1@gmail.com</a>
